@@ -30,7 +30,6 @@ got <- read_csv("data/got_ratings.csv")
 
 ```{r}
 
-ggplot(got, aes(x=moral,y=physical)) 
 
 ```
 
@@ -38,8 +37,6 @@ ggplot(got, aes(x=moral,y=physical))
 
 ```{r}
 
-ggplot(got, aes(x=moral,y=physical)) +
-  geom_point() 
 
 ```
 
@@ -47,9 +44,6 @@ ggplot(got, aes(x=moral,y=physical)) +
 
 ```{r}
 
-ggplot(got, aes(x=moral,y=physical)) +
-  geom_point() +
-  geom_text(aes(label=label), nudge_y = -.03)
 
 ```
 
@@ -57,9 +51,6 @@ ggplot(got, aes(x=moral,y=physical)) +
 
 ```{r}
 
-ggplot(got, aes(x=moral,y=physical, color=gender)) +
-  geom_point() +
-  geom_text(aes(label=label), nudge_y = -.03)
 
 ```
 
@@ -67,10 +58,6 @@ ggplot(got, aes(x=moral,y=physical, color=gender)) +
 
 ```{r}
 
-ggplot(got, aes(x=moral,y=physical, color=gender)) +
-  geom_point() +
-  scale_y_reverse() +
-  geom_text(aes(label=label), nudge_y = -.03) 
 
 ```
 
@@ -78,12 +65,6 @@ ggplot(got, aes(x=moral,y=physical, color=gender)) +
 
 ```{r}
 
-ggplot(got, aes(x=moral,y=physical, color=gender)) +
-  geom_point() +
-  scale_y_reverse() +
-  geom_hline(yintercept=.5) +
-  geom_vline(xintercept=.5) +
-  geom_text(aes(label=label), nudge_y = -.03)
 
 ```
 
@@ -91,13 +72,6 @@ ggplot(got, aes(x=moral,y=physical, color=gender)) +
 
 ```{r}
 
-ggplot(got, aes(x=moral,y=physical, color=gender)) +
-  geom_point() +
-  scale_y_reverse(lim=c(1,0)) +
-  geom_hline(yintercept=.5) +
-  geom_vline(xintercept=.5) +
-  geom_text(aes(label=label), nudge_y = -.03) +
-  scale_x_continuous(limits=c(0,1))
 
 ```
 
@@ -105,14 +79,6 @@ ggplot(got, aes(x=moral,y=physical, color=gender)) +
 
 ```{r}
 
-ggplot(got, aes(x=moral,y=physical, color=gender)) +
-  geom_point() +
-  scale_y_reverse(lim=c(1,0)) +
-  geom_hline(yintercept=.5) +
-  geom_vline(xintercept=.5) +
-  geom_text(aes(label=label), nudge_y = -.03) +
-  scale_x_continuous(limits=c(0,1)) +
-  theme_bw()
 
 ```
 
@@ -120,14 +86,6 @@ ggplot(got, aes(x=moral,y=physical, color=gender)) +
 
 ```{r}
 
-ggplot(got, aes(x=moral,y=physical, color=gender)) +
-  geom_point() +
-  scale_y_reverse(lim=c(1,0)) +
-  geom_hline(yintercept=.5) +
-  geom_vline(xintercept=.5) +
-  geom_text(aes(label=label), nudge_y = -.03, show.legend = FALSE) +
-  scale_x_continuous(limits=c(0,1)) +
-  theme_bw()
 
 ```
 
@@ -135,17 +93,5 @@ ggplot(got, aes(x=moral,y=physical, color=gender)) +
 
 ```{r}
 
-ggplot(got, aes(x=moral,y=physical, color=gender)) +
-  geom_point() +
-  scale_y_reverse(lim=c(1,0)) +
-  geom_hline(yintercept=.5) +
-  geom_vline(xintercept=.5) +
-  geom_text(aes(label=label), nudge_y = -.03, show.legend = FALSE) +
-  scale_x_continuous(limits=c(0,1)) +
-  theme_bw() +
-  annotate(geom = "text", x=.5, y=1, label="Ugly") +
-  annotate(geom = "text", x=.5, y=0, label="Beautiful") +
-  annotate(geom = "text", x=0, y=.48, label="Evil") +
-  annotate(geom = "text", x=1, y=.52, label="Good") 
 
 ```

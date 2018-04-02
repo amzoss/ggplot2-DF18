@@ -30,19 +30,13 @@ names(punch) <- make.names(names(punch), unique=TRUE)
 
 ```{r}
 
-ggplot(punch) +
-  geom_col(aes(x=Title,y=total.time.in.minutes))
 
 ```
 
 ## Fix the axis labels
 
-Hint: try coord_flip()
-
 ```{r}
 
-ggplot(punch) +
-  geom_col(aes(x=Title,y=total.time.in.minutes))
 
 ```
 
@@ -50,14 +44,10 @@ ggplot(punch) +
 
 ```{r}
 
-ggplot(punch) +
-  geom_col(aes(x=Title,y=total.time.in.minutes))
 
 ```
 
 ## Do it yourself - How many films per year?
-
-Hint: geom_bar will count things for you
 
 ```{r}
 
