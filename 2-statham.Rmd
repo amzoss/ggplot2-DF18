@@ -1,0 +1,70 @@
+---
+title: "Time to Statham Punch"
+author: "Angela Zoss"
+date: "2/1/2018"
+output: github_document
+---
+
+## Setup your environment
+
+```{r}
+
+# Load required libraries
+
+library(tidyverse)
+
+```
+
+## Load your data
+
+```{r}
+
+# data comes from http://time.to.stathampun.ch/
+
+punch <- read_csv("data/time_to_statham_punch.csv")
+names(punch) <- make.names(names(punch), unique=TRUE)
+
+```
+
+## Cut to the chase - Time to punch for each movie
+
+```{r}
+
+ggplot(punch) +
+  geom_col(aes(x=Title,y=total.time.in.minutes))
+
+```
+
+## Fix the axis labels
+
+Hint: try coord_flip()
+
+```{r}
+
+ggplot(punch) +
+  geom_col(aes(x=Title,y=total.time.in.minutes))
+
+```
+
+## Advanced: Sort the bars
+
+```{r}
+
+ggplot(punch) +
+  geom_col(aes(x=Title,y=total.time.in.minutes))
+
+```
+
+## Do it yourself - How many films per year?
+
+Hint: geom_bar will count things for you
+
+```{r}
+
+```
+
+## Do it yourself - Try a different chart type
+
+```{r}
+
+```
